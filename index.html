@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Macondo&family=Poppins:wght@500;600;700&family=Roboto&family=Work+Sans:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="main">
+    <h1>Whether App</h1>
+    <input type="number" name="number" id="number" required>
+    <button onclick="press()">Click</button>
+    <br>
+    <br>
+     <h2 id="result"></h2>
+</div>
+
+
+<script>
+ 
+  function press(){
+    let getData = document.querySelector('#number').value;
+
+    if(getData > 30){
+        document.getElementById('result').innerHTML = "It's To Hot Outside";
+
+    }else if(getData > 25){
+        document.getElementById('result').innerHTML = "It's Hot Outside";
+
+    }else if(getData > 20){
+        document.getElementById('result').innerHTML = "It's Pleasant Outside";
+
+    }else if(getData > 15){
+        document.getElementById('result').innerHTML = "You Need a Jacket On Ride";
+
+    }else if(getData > 10){
+        document.getElementById('result').innerHTML = "Its freezing Outside";
+
+    }else if(getData >= 1){
+        document.getElementById('result').innerHTML = "Don't Go OutSide It's To Cold";
+
+    }else{
+        document.getElementById('result').innerHTML = "";
+
+    }
+
+  }
+</script>
+</body>
+
+</html>
